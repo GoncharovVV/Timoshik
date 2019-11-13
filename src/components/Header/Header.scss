@@ -1,0 +1,4 @@
+@import '../../scss/mixin';
+.nav-list {
+  @include flex();
+}
