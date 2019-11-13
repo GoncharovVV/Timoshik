@@ -1,9 +1,13 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import './Header.scss';
+import "./Header.scss";
+import Button from "../Button";
 export interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    console.log(e.currentTarget);
+  };
   return (
     <header className="header">
       <div className="container">
@@ -49,9 +53,11 @@ const Header: React.FC<HeaderProps> = () => {
                 Contact
               </Link>
             </li>
+            <li className="nav-list__item">
+              <Button label="test" classNames="nav-list__button" handleClick={handleClick} />
+            </li>
           </ul>
         </nav>
-
       </div>
     </header>
   );
