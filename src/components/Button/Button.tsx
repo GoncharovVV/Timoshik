@@ -13,7 +13,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = props => {
 
   const { label, handleClick, btnType = 'button', classNames = '', icon = '' } = props;
-  const hintClassName = classnames('btn', { [classNames]: classNames.length>0 });
+  console.log(props.children);
+  const hintClassName = classnames('btn', { [classNames]: classNames.length>0, 'btn_svg': props.children });
   let btnContent: JSX.Element;
   if (icon.length>0) {
     btnContent = <span className={`btn__icon ${icon}`}>{label}</span>
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonProps> = props => {
   }
   return (
     <button type={btnType} className={hintClassName} onClick={handleClick}>
+      {props.children}
       {btnContent}
     </button>
   );

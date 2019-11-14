@@ -2,12 +2,17 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 import Button from "../Button";
-export interface HeaderProps {}
+import classnames from 'classnames';
+import { ReactComponent as Burger } from '../../assets/icons/burger.svg';
+export interface HeaderProps {};
 
 const Header: React.FC<HeaderProps> = () => {
+  const [show, setShow] = React.useState(false);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     console.log(e.currentTarget);
   };
+  const hintClassName = classnames('header-nav', { 'show': show });
+
   return (
     <header className="header">
       <div className="container">
@@ -16,10 +21,12 @@ const Header: React.FC<HeaderProps> = () => {
         </Link>
         <Button
           label="Menu"
-          classNames="btn_toggle" 
-          handleClick={handleClick}
-        />
-        <nav className="header-nav">
+          classNames="btn_toggle btn_uppercase"
+          handleClick={() => setShow(!show)}
+        >
+          <Burger className="svg-icon"/>
+        </Button>
+        <nav className={hintClassName}>
           <ul className="nav-list">
             <li className="nav-list__item">
               <Link className="nav-list__link active" to="/">

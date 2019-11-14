@@ -12,10 +12,36 @@
   .container {
     @include flex($wrap: wrap, $just: space-between, $align: center);
   }
+  @include max-screen(990px) {
+    background-color: $dark;
+  }
+}
+.header-nav {
+  @include max-screen(990px) {
+    width: 100%;
+    visibility: 0;
+    opacity: 0;
+    max-height: 0vh;
+    transition: opacity .3s, visibility .3s, max-height .3s;
+    overflow-y: auto;
+    &.show {
+      max-height: 90vh;
+      visibility: visible;
+      opacity: 1;
+    }
+    .btn {
+      width: 100%;
+      border-radius: $rad-sm;
+      text-align: left;
+    }
+  }
 }
 .nav-list {
   @include flex($wrap: wrap, $align: baseline);
   flex-grow: 1;
+  @include max-screen(990px) {
+    display: block;
+  }
 }
 
 .main-link {
@@ -23,12 +49,18 @@
   font-weight: $fow700;
   font-size: $fos-md20;
   text-transform: uppercase;
+  color: $dark;
+  @include max-screen(990px) {
+    color: $white;
+  }
 }
+
 .nav-list__link {
   color: $dark;
   transition: color .3s;
   font-size: $fos-sm;
   text-transform: uppercase;
+  padding: 14px 20px;
   &.active {
     color: $blue;
     pointer-events: none;
@@ -38,7 +70,15 @@
       color: $blue;
     }
   }
+  @include max-screen(990px) {
+    color: $white;
+    width: 100%;
+  }
 }
-.nav-list__item {
-  padding: 1.4rem 2rem;
+
+.svg-icon {
+	width: 1em;
+	height: 1em;
+	display: block;
+	fill: currentColor;
 }

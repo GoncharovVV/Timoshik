@@ -1,6 +1,6 @@
 @import '../../scss/mixin', '../../scss/variables';
 .btn_border {
-  border-radius: $rad-sm;
+  border-radius: $rad-md;
   border: $border-blue;
 }
 .btn_transparent {
@@ -21,9 +21,14 @@
   padding: 10px 20px;
   font-size: $fos-sm;
 }
+
 .btn_toggle {
   display: none;
+  color: $white05;
   @include max-screen(990px) {
-    display: block;
+    @include flex($align: center);
+  }
+  .svg-icon {
+    margin-right: 10px;
   }
 }
