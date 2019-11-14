@@ -1,0 +1,29 @@
+@import '../../scss/mixin', '../../scss/variables';
+.btn_border {
+  border-radius: $rad-sm;
+  border: $border-blue;
+}
+.btn_transparent {
+  color: $blue;
+  background-color: transparent;
+  transition: color .3s, background-color .3s;
+  @include min-screen(1024px) {
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+}
+.btn_uppercase {
+  text-transform: uppercase;
+}
+.btn_md {
+  padding: 10px 20px;
+  font-size: $fos-sm;
+}
+.btn_toggle {
+  display: none;
+  @include max-screen(990px) {
+    display: block;
+  }
+}

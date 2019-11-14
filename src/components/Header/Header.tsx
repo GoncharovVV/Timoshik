@@ -11,10 +11,18 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="header">
       <div className="container">
+        <Link className="main-link" to="/">
+          Ultim8.
+        </Link>
+        <Button
+          label="Menu"
+          classNames="btn_toggle" 
+          handleClick={handleClick}
+        />
         <nav className="header-nav">
           <ul className="nav-list">
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/">
+              <Link className="nav-list__link active" to="/">
                 Home
               </Link>
             </li>
@@ -53,8 +61,12 @@ const Header: React.FC<HeaderProps> = () => {
                 Contact
               </Link>
             </li>
-            <li className="nav-list__item">
-              <Button label="test" classNames="nav-list__button" handleClick={handleClick} />
+            <li className="nav-list__btn">
+              <Button
+                label="Get a Quote"
+                classNames="btn_transparent btn_border btn_uppercase btn_md"
+                handleClick={handleClick}
+              />
             </li>
           </ul>
         </nav>

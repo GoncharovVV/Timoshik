@@ -1,4 +1,23 @@
 $font-primary: 'Open Sans',Arial, sans-serif;
 
-$main_color: #000;
+$dark: #000;
+$main_color: $dark;
 $white: #fff;
+$white05: rgba(255, 255, 255, 0.5);
+$white07: rgba(255, 255, 255, 0.7);
+
+$grey100: #b3b3b3;
+
+$blue: #2f89fc;
+
+$fow300: 300;
+$fow400: 400;
+$fow700: 700;
+
+$fos-sm: 13px;
+$fos-md16: 16px;
+$fos-md20: 20px;
+
+$rad-sm: 30px;
+
+$border-blue: 1px solid $blue;

@@ -1,4 +1,44 @@
-@import '../../scss/mixin';
+@import '../../scss/mixin', '../../scss/variables';
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  background-color: $white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  .container {
+    @include flex($wrap: wrap, $just: space-between, $align: center);
+  }
+}
 .nav-list {
-  @include flex();
+  @include flex($wrap: wrap, $align: baseline);
+  flex-grow: 1;
+}
+
+.main-link {
+  margin-right: 10px;
+  font-weight: $fow700;
+  font-size: $fos-md20;
+  text-transform: uppercase;
+}
+.nav-list__link {
+  color: $dark;
+  transition: color .3s;
+  font-size: $fos-sm;
+  text-transform: uppercase;
+  &.active {
+    color: $blue;
+    pointer-events: none;
+  }
+  @include min-screen(1024px) {
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+.nav-list__item {
+  padding: 1.4rem 2rem;
 }

@@ -1,21 +1,29 @@
 import * as React from "react";
-// import classnames from 'classnames';
+import classnames from 'classnames';
+import './Button.scss'
 
-type ButtonProps = {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
   classNames?: string;
-  btnType?: string;
+  btnType?: 'submit' | 'reset' | 'button';
+  icon?: string;
   handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const Button: React.FC<ButtonProps> = props => {
-  const { label, handleClick } = props;
-  // const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-  //   console.log("click");
-  // };
+
+  const { label, handleClick, btnType = 'button', classNames = '', icon = '' } = props;
+  const hintClassName = classnames('btn', { [classNames]: classNames.length>0 });
+  let btnContent: JSX.Element;
+  if (icon.length>0) {
+    btnContent = <span className={`btn__icon ${icon}`}>{label}</span>
+  }
+  else {
+    btnContent = <span>{label}</span>
+  }
   return (
-    <button className="btn" onClick={handleClick}>
-      {label}
+    <button type={btnType} className={hintClassName} onClick={handleClick}>
+      {btnContent}
     </button>
   );
 };

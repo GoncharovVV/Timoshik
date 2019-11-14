@@ -70,7 +70,8 @@ button::-moz-focus-inner {
 	border: none;
 }
 button {
-	background-color: transparent;
+  background-color: transparent;
+  line-height: 1.2;
 }
 
 *, *:before, *:after {
