@@ -3,7 +3,7 @@ import "./App.scss";
 import Header from "../Header";
 import {
   BrowserRouter as Router,
-  // Route 
+  // Route
 } from 'react-router-dom';
 
 const App: React.FC = () => {
@@ -12,7 +12,6 @@ const App: React.FC = () => {
       <Router>
         <Header/>
         <main className="main"></main>
-        <footer className="footer"></footer>
       </Router>
     </div>
   );
