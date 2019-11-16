@@ -1,0 +1,9 @@
+@import '../../scss/mixin';
+.home {
+  .intro {
+    margin: 0 0 -3.9vw;
+    @include max-screen(990px) {
+      margin: 0 0 -5.8vw;
+    }
+  }
+}

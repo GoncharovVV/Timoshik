@@ -1,0 +1,33 @@
+@import '../../scss/mixin', '../../scss/variables';
+.goal {
+  width: 33.33%;
+  text-align: center;
+  padding: 0 1.5rem;
+  margin-bottom: 4rem;
+  @include max-screen(768px) {
+    width: 100%;
+  }
+}
+.goal__icon {
+  margin-bottom: 25px;
+  .svg-icon {
+    display: inline-block;
+    color: $blue;
+    font-size: 6rem;
+  }
+}
+.goal__title {
+  line-height: $lih15;
+  font-size: $fos-md20;
+  margin-bottom: 8px;
+}
+.goal__description {
+  color: $grey400;
+  font-size: $fos-md16;
+  line-height: 28.8px;
+  padding: 8px;
+  font-weight: 300;
+  @include max-screen(990px) {
+    padding: 0;
+  }
+}

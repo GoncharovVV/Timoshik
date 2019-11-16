@@ -91,9 +91,46 @@ code {
   margin: 0 auto;
   width: 100%;
 }
+.container-fluid {
+  padding: 0 15px;
+}
 .main {
   flex: 1 0;
 }
 .footer {
   flex: 0 0;
+}
+.parallax {
+  background: linear-gradient(135deg, #2f89fc 0%, #55fbc2 100%);
+  padding: 6.4rem 0;
+}
+.title {
+  line-height: 1.2;
+  font-weight: 400;
+}
+.title_blue {
+  color: $blue;
+}
+
+.title_large {
+  font-size: $fos-lg32;
+}
+.title_md {
+  font-size: $fos-md20;
+}
+.title_white {
+  color: $white;
+}
+.text_center {
+  text-align: center;
+}
+.text__md {
+  line-height: 1.5;
+  font-size: $fos-md16;
+}
+.ftco-section {
+  padding: 11.2rem 0;
+}
+.cards {
+  @include flex($wrap: wrap, $align: flex-start);
 }

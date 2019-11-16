@@ -14,12 +14,27 @@
     }
   }
 }
+.btn_full {
+  background-color: $blue;
+  color: $white;
+  transition: color .3s, background-color .3s;
+  @include min-screen(1024px) {
+    &:hover {
+      color: $blue;
+      background-color: transparent;
+    }
+  }
+}
 .btn_uppercase {
   text-transform: uppercase;
 }
 .btn_md {
   padding: 10px 20px;
   font-size: $fos-sm;
+}
+.btn_lg {
+  padding: 16px 24px;
+  font-size: $fos-md16;
 }
 
 .btn_toggle {

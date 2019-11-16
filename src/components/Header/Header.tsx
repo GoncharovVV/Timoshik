@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = () => {
         <nav className={hintClassName}>
           <ul className="nav-list">
             <li className="nav-list__item">
-              <Link className="nav-list__link active" to="/">
+              <Link className="nav-list__link" to="/">
                 Home
               </Link>
             </li>

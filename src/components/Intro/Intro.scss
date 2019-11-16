@@ -1,0 +1,38 @@
+@import '../../scss/mixin', '../../scss/variables';
+
+.intro {
+  .container-fluid {
+    @include flex($wrap: wrap, $align: center);
+  }
+  .text__md {
+    margin-bottom: 4.8rem;
+    color: $dark07;
+  }
+  .btn {
+    margin: 3px;
+  }
+  .title {
+    margin-bottom: 2.4rem;
+  }
+}
+.intro__left {
+  width: 40%;
+  @include flex($just: flex-end);
+  @include max-screen(990px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.intro__right {
+  width: 60%;
+  @include max-screen(990px) {
+    width: 100%;
+  }
+}
+.intro__left_content {
+  max-width: 480px;
+  width: 100%;
+  @include max-screen(990px) {
+    max-width: 100%;
+  }
+}
