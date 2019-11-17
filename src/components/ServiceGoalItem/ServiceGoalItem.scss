@@ -1,0 +1,45 @@
+@import '../../scss/variables', '../../scss/mixin';
+.service__img_holder {
+  display: flex;
+}
+.service__img {
+  object-fit: cover;
+}
+.service__right {
+  padding: 3% 8% 3% 4%;
+  .title__description {
+    margin-bottom: 4.8rem;
+    display: inline-block;
+  }
+}
+.service__item {
+  margin-bottom: 3rem;
+  @include flex($align: flex-start);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.service__details {
+  h3 {
+    line-height: 1.5;
+    font-size: $fos-md20;
+    margin-bottom: 8px;
+  }
+  p {
+    color: $grey400;
+    font-size: 16px;
+    line-height: 28.8px;
+    font-weight: $fow300;
+  }
+}
+.service__logo {
+  @include flex($align: center, $just: center, $align-c: center);
+  flex-shrink: 0;
+  margin-right: 3rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: $blue;
+  color: $white;
+  font-size: 3.2rem;
+}

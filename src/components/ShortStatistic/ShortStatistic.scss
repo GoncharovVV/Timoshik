@@ -1,0 +1,22 @@
+@import '../../scss/mixin', '../../scss/variables';
+
+.short-stat {
+  background: linear-gradient(135deg, #2f89fccf 0%, #55fbc2d6 100%), url(/static/media/about.82c0c629.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  .item_quoter {
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+}
+.item__title {
+  display: block;
+}
+.item__title {
+  font-size: $fos-lg34;
+  margin-bottom: 10px;
+}
+.item__descr {
+  color: $white07;
+}

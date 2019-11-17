@@ -7,10 +7,10 @@ export interface SectionTitleProps {
 
 const SectionTitle: React.SFC<SectionTitleProps> = ({ title, description }) => {
   return (
-    <div className="text_center section__title_container">
+    <>
       <h2 className="section__title">{title}</h2>
       <span className="title__description">{description}</span>
-    </div>
+    </>
   );
 }
 
