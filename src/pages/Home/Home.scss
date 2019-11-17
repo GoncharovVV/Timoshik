@@ -1,4 +1,4 @@
-@import '../../scss/mixin';
+@import '../../scss/mixin', '../../scss/variables';
 .home {
   .intro {
     margin: 0 0 -3.9vw;
@@ -9,4 +9,24 @@
 }
 .ftco__services {
   padding-bottom: 0;
+}
+.ftco-section_grey {
+  background-color: $grey;
+}
+.get-quote {
+  .half_lg {
+    padding: 4.8rem;
+  }
+}
+.get-quote__left {
+  background-color: $blue;
+  color: $white;
+  padding-left: 15px;
+}
+.get-quote__content {
+  max-width: 510px;
+  width: 100%;
+}
+.get-quote__right {
+  padding-right: 15px;
 }

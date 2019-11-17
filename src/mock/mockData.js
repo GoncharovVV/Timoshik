@@ -66,6 +66,68 @@ const stat = [
     description: 'Happy Clients',
   }
 ];
+const prices = [
+  {
+    id: 'pr1',
+    title: 'FREE',
+    price: 0,
+    details: '100% free. Forever',
+    description: 'Happy Clients',
+    packageData: [
+      {title: '150 GB',
+      description: 'Bandwidth'},
+      {title: '100 GB',
+      description: 'Storage'},
+      {title: '$1.00 / GB',
+      description: 'Overages'}
+    ]
+  },
+  {
+    id: 'pr2',
+    title: 'STARTUP',
+    price: 19,
+    details: '100% free. Forever',
+    description: 'Happy Clients',
+    packageData: [
+      {title: '150 GB',
+      description: 'Bandwidth'},
+      {title: '100 GB',
+      description: 'Storage'},
+      {title: '$1.00 / GB',
+      description: 'Overages'}
+    ]
+  },
+  {
+    id: 'pr3',
+    title: 'PREMIUM',
+    price: 49,
+    details: '100% free. Forever',
+    description: 'Happy Clients',
+    packageData: [
+      {title: '150 GB',
+      description: 'Bandwidth'},
+      {title: '100 GB',
+      description: 'Storage'},
+      {title: '$1.00 / GB',
+      description: 'Overages'}
+    ]
+  },
+  {
+    id: 'pr4',
+    title: 'PRO',
+    price: 99,
+    details: '100% free. Forever',
+    description: 'Happy Clients',
+    packageData: [
+      {title: '150 GB',
+      description: 'Bandwidth'},
+      {title: '100 GB',
+      description: 'Storage'},
+      {title: '$1.00 / GB',
+      description: 'Overages'}
+    ]
+  }
+];
 const work = [
   {
     id: 'w1',
@@ -102,5 +164,6 @@ export {
   goalItems,
   serviceItems,
   stat,
-  work
+  work,
+  prices
 };

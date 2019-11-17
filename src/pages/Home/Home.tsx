@@ -4,10 +4,12 @@ import './Home.scss';
 import SectionTitle from '../../components/SectionTitle';
 import { goalItems } from '../../mock/mockData';
 import { work } from '../../mock/mockData';
+import { prices } from '../../mock/mockData';
 import GoalItem from '../../components/GoalItem';
 import ServiceGoalItem from '../../components/ServiceGoalItem';
 import ShortStatistic from '../../components/ShortStatistic';
 import BrandItem from '../../components/BrandItem';
+import PriceCard from '../../components/PriceCard';
 export interface HomeProps {}
 
 const Home: React.SFC<HomeProps> = () => {
@@ -27,6 +29,14 @@ const Home: React.SFC<HomeProps> = () => {
         key={id}
         image={image}
         title={title}/>
+    );
+  });
+  const pricesElements = prices.map(item => {
+    return (
+      <PriceCard
+        key={item.id}
+        {...item}
+      />
     );
   });
   return (
@@ -63,6 +73,30 @@ const Home: React.SFC<HomeProps> = () => {
         </div>
         <div className="cards container-fluid">
           {workElements}
+        </div>
+      </section>
+      <section className="ftco-section ftco-section_grey">
+        <div className="container">
+          <div className="text_center section__title_container">
+            <SectionTitle
+              title="Our Best Pricing"
+              description="Pricing Plans"
+            />
+          </div>
+          <div className="cards">
+            {pricesElements}
+          </div>
+        </div>
+      </section>
+      <section className="cards get-quote">
+        <div className="half_lg get-quote__left">
+          <div className="get-quote__content">
+            
+          </div>
+        </div>
+
+        <div className="half_lg get-quote__right">
+          <div className="get-quote__content"></div>
         </div>
       </section>
     </>

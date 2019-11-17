@@ -1,1 +1,52 @@
 @import '../../scss/mixin', '../../scss/variables';
+.brand-item {
+  @include flex();
+  position: relative;
+  width: 33.33%;
+  padding: 0 1.5rem;
+  height: 40rem;
+  margin-bottom: 3rem;
+  img {
+    object-fit: cover;
+  }
+  @include max-screen(1152px) {
+    width: 50%;
+  }
+  @include max-screen(640px) {
+    width: 100%;
+  }
+  @include min-screen(1024px) {
+    &:hover {
+      .brand-item__description {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+.brand-item__description {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  bottom: 0;
+  right: 1.5rem;
+  z-index: 1;
+  width: calc(100% - 3rem);
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+  background-color: $blue;
+  color: $white;
+  @include flex($align: center, $just: center, $wrap: wrap, $align-c: center);
+  text-align: center;
+  strong {
+    width: 100%;
+    font-size: $fos-md22;
+    font-weight: $fow400;
+  }
+  span {
+    color: $white07;
+    margin-bottom: 5px;
+  }
+}
