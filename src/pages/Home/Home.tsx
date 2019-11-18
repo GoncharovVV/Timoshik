@@ -12,6 +12,7 @@ import BrandItem from '../../components/BrandItem';
 import PriceCard from '../../components/PriceCard';
 import { ReactComponent as Check } from '../../assets/icons/check.svg';
 import Button from '../../components/Button';
+import Testimony from '../../components/Testimony';
 
 export interface HomeProps {}
 
@@ -31,7 +32,8 @@ const Home: React.SFC<HomeProps> = () => {
       <BrandItem
         key={id}
         image={image}
-        title={title}/>
+        title={title}
+      />
     );
   });
   const pricesElements = prices.map(item => {
@@ -142,6 +144,7 @@ const Home: React.SFC<HomeProps> = () => {
           </div>
         </div>
       </section>
+      <Testimony/>
     </>
   );
 }

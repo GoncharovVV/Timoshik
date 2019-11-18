@@ -4,6 +4,7 @@ import work3 from '../assets/images/work-3.jpg';
 import work4 from '../assets/images/work-4.jpg';
 import work5 from '../assets/images/work-5.jpg';
 import work6 from '../assets/images/work-6.jpg';
+import person from '../assets/images/person_1.jpg';
 const goalItems = [
   {
     id: 'gi1',
@@ -160,10 +161,41 @@ const work = [
     image: work6,
   }
 ];
+const testimony = [
+  {
+    id: 'cl1',
+    clientName: 'Dennis Green',
+    image: person,
+    jobPosition: 'Web Developer',
+    description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+  },
+  {
+    id: 'cl2',
+    clientName: 'Dennis Green1',
+    image: person,
+    jobPosition: 'Web Developer',
+    description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+  },
+  {
+    id: 'cl3',
+    clientName: 'Dennis Green2',
+    image: person,
+    jobPosition: 'Web Developer',
+    description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+  },
+  {
+    id: 'cl4',
+    clientName: 'Dennis Green3',
+    image: person,
+    jobPosition: 'Web Developer',
+    description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+  },
+];
 export {
   goalItems,
   serviceItems,
   stat,
   work,
-  prices
+  prices,
+  testimony
 };
