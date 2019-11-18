@@ -13,6 +13,7 @@ import Pricing from '../../pages/Pricing';
 import ServicesPage from '../../pages/ServicesPage';
 import Team from '../../pages/Team';
 import Work from '../../pages/Work';
+import Footer from "../Footer";
 
 const App: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const App: React.FC = () => {
       <Router>
         <Header/>
         <main className="main">
-          <Route path="/" component={Home} exact/>
+          <Route path="/" component={Home} exact={true}/>
           <Route path="/about" component={About}/>
           <Route path="/blog" component={Blog}/>
           <Route path="/contact" component={Contact}/>
@@ -29,6 +30,7 @@ const App: React.FC = () => {
           <Route path="/team" component={Team}/>
           <Route path="/work" component={Work}/>
         </main>
+        <Footer/>
       </Router>
     </div>
   );

@@ -1,0 +1,108 @@
+@import '../../scss/mixin', '../../scss/variables';
+.footer {
+  color: $white;
+  background-color: $dark100;
+  font-weight: $fow300;
+  line-height: 28.8px;
+  p {
+    color: $white07;
+    margin-bottom: 15px;
+  };
+  a {
+    color: $white07;
+    transition: color .3s;
+    @include min-screen(1024px) {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .cards {
+    margin-bottom: 5rem;
+  }
+}
+.footer__column {
+  flex: 1 1;
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  &.footer__column_nogrow {
+    flex: 0 0;
+  }
+  &.footer__column_blog {
+    flex-basis: 280px;
+    line-height: 1.5;
+  }
+}
+.footer__title {
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.social-list {
+  @include flex($align: center);
+}
+.social-list__item {
+  margin-right: 10px;
+}
+.social-list__link {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  @include flex($align: center, $just: center);
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 26px;
+}
+.copyright {
+  text-align: center;
+}
+.footer-blog {
+  @include flex($align: flex-start);
+  margin-bottom: 2.4rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 2.5rem;
+    flex-shrink: 0;
+  }
+}
+.footer-blog__details {
+  flex: 1 1;
+}
+.footer-blog__title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.footer-blog__row {
+  @include flex($align: baseline, $wrap: wrap);
+  font-size: 12px;
+  color: $white05;
+  white-space: nowrap;
+  .svg-icon {
+    margin: 0 5px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.contacts__list {
+  @include flex($align: flex-start);
+  font-size: 16px;
+  margin-bottom: 2rem;
+  line-height: 24px;
+  .svg-icon {
+    font-size: 18px;
+    color: $white;
+    margin-right: 22px;
+    margin-top: 3px;
+  }
+  a {
+    @include flex($align: flex-start);
+  }
+}
