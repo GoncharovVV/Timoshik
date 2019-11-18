@@ -1,0 +1,32 @@
+@import '../../scss/variables', '../../scss/mixin';
+.pagination-list {
+  @include flex($align: flex-start, $just:center);
+  padding-top: 4.8rem;
+  li {
+    margin-right: 5px;
+    flex-shrink: 0;
+  }
+  a {
+    color: $blue;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #add0fe;
+    background-color: transparent;
+    @include flex($align: center, $just: center);
+    transition: color .3s, border .3s, background-color .3s;
+    @include min-screen(1024px) {
+      &:hover {
+        background-color: #add0fe;
+        color: #2f89fc;
+        border: 1px solid transparent;
+      }
+    }
+    &.active {
+      background-color: #add0fe;
+      color: #2f89fc;
+      border: 1px solid transparent;
+      pointer-events: none;
+    }
+  }
+}

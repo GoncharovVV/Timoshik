@@ -4,6 +4,7 @@ import Subscribe from '../../components/Subscribe';
 import GoalItem from '../../components/GoalItem';
 import SectionTitle from '../../components/SectionTitle';
 import { goalItems } from '../../mock/mockData';
+import TopSection from '../../components/TopSection';
 export interface ServicesPageProps {
 
 }
@@ -19,8 +20,24 @@ const ServicesPage: React.SFC<ServicesPageProps> = () => {
       />
     );
   });
+  const links = [
+    {
+      id: 'l1',
+      title: 'Home',
+      lHref: '/'
+    },
+    {
+      id: 'l2',
+      title: 'Services',
+      lHref: '/services'
+    }
+  ];
   return (
     <>
+      <TopSection
+        title="Services"
+        links={links}
+      />
       <section className="ftco-section">
         <div className="text_center section__title_container">
           <SectionTitle

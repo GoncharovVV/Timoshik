@@ -1,0 +1,27 @@
+@import '../../scss/mixin', '../../scss/variables';
+.about-right {
+  padding: 4.8rem;
+  h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 2.4rem;
+  }
+  p {
+    color: $grey400;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+
+}
+.button-row {
+  margin-bottom: 4.8rem;
+  @include flex($align: center, $wrap: wrap);
+  .btn {
+    margin: 5px;
+  }
+}
+.image-fit {
+  object-fit: cover;
+}

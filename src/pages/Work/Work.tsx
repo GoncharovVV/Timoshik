@@ -3,6 +3,7 @@ import SectionTitle from '../../components/SectionTitle';
 import { work } from '../../mock/mockData';
 import BrandItem from '../../components/BrandItem';
 import Subscribe from '../../components/Subscribe';
+import TopSection from '../../components/TopSection';
 export interface WorkProps {
 
 }
@@ -17,8 +18,24 @@ const Work: React.SFC<WorkProps> = () => {
       />
     );
   });
+  const links = [
+    {
+      id: 'l1',
+      title: 'Home',
+      lHref: '/'
+    },
+    {
+      id: 'l2',
+      title: 'Work',
+      lHref: '/work'
+    }
+  ];
   return (
     <>
+      <TopSection
+        title="Work"
+        links={links}
+      />
       <section className="ftco-section">
         <div className="text_center section__title_container">
           <SectionTitle

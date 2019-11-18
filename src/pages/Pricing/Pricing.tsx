@@ -4,6 +4,7 @@ import SectionTitle from '../../components/SectionTitle';
 import PriceCard from '../../components/PriceCard';
 import { prices } from '../../mock/mockData';
 import './Pricing.scss';
+import TopSection from '../../components/TopSection';
 export interface PricingProps {
 
 }
@@ -17,8 +18,24 @@ const Pricing: React.SFC<PricingProps> = () => {
       />
     );
   });
+  const links = [
+    {
+      id: 'l1',
+      title: 'Home',
+      lHref: '/'
+    },
+    {
+      id: 'l2',
+      title: 'Pricing',
+      lHref: '/pricing'
+    }
+  ];
   return (
     <>
+      <TopSection
+        title="Pricing"
+        links={links}
+      />
       <section className="ftco-section ftco-section_grey">
         <div className="container">
           <div className="text_center section__title_container">
