@@ -10,6 +10,9 @@ import ServiceGoalItem from '../../components/ServiceGoalItem';
 import ShortStatistic from '../../components/ShortStatistic';
 import BrandItem from '../../components/BrandItem';
 import PriceCard from '../../components/PriceCard';
+import { ReactComponent as Check } from '../../assets/icons/check.svg';
+import Button from '../../components/Button';
+
 export interface HomeProps {}
 
 const Home: React.SFC<HomeProps> = () => {
@@ -39,6 +42,9 @@ const Home: React.SFC<HomeProps> = () => {
       />
     );
   });
+  const handleClickForm = () => {
+    console.log('form');
+  }
   return (
     <>
       <section className="home">
@@ -91,12 +97,49 @@ const Home: React.SFC<HomeProps> = () => {
       <section className="cards get-quote">
         <div className="half_lg get-quote__left">
           <div className="get-quote__content">
-
+            <h2 className="section__title">
+              Reasons for Choosing Us
+            </h2>
+            <p>
+              Even the all-powerful Pointing has no control about the blind texts it
+              is an almost unorthographic life One day however a small
+              line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+              Because there were thousands of bad Commas, wild Question Marks and devious Semikoli
+            </p>
+            <ul className="quote__list">
+              <li> <Check className="svg-icon"/> Consectetur adipisicing elit</li>
+              <li> <Check className="svg-icon"/> Adipisci repellat accusamus</li>
+              <li> <Check className="svg-icon"/> Tempore reprehenderit vitae</li>
+            </ul>
           </div>
         </div>
 
         <div className="half_lg get-quote__right">
-          <div className="get-quote__content"></div>
+          <div className="get-quote__content">
+            <h2 className="section__title">
+              Get a Free Quote
+            </h2>
+            <form className="quote cards">
+              <div className="form-control__holder">
+                <input type="text" className="form-control" placeholder="Full Name" name="fullname"/>
+              </div>
+              <div className="form-control__holder">
+                <input type="text" className="form-control" placeholder="Email" name="email"/>
+              </div>
+              <div className="form-control__holder">
+                <input type="text" className="form-control" placeholder="Phone" name="phone"/>
+              </div>
+              <div className="form-control__holder">
+                <input type="text" className="form-control" placeholder="Website" name="website"/>
+              </div>
+              <textarea className="form-control textarea" placeholder="Message" name="message" id="" cols={30} rows={10}></textarea>
+              <Button
+                classNames="btn_lg btn_full btn_border"
+                label="Get a Quote"
+                handleClick={handleClickForm}
+              />
+            </form>
+          </div>
         </div>
       </section>
     </>
