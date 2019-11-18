@@ -1,0 +1,68 @@
+@import '../../scss/mixin', '../../scss/variables';
+.subscribe {
+  color: $white;
+  .title__description {
+    color: $white07;
+  }
+  .section__title_container {
+    margin-bottom: 4.8rem;
+  }
+}
+.subscribe-form {
+  max-width: 415px;
+  width: 100%;
+  @include flex($flex: inline-flex);
+  border: $border-white;
+  border-radius: 30px;
+
+}
+.subscribe-form__input {
+  background-color: transparent;
+  min-width: 100px;
+  border: none;
+  flex: 1 1;
+  color: $white;
+  padding: 17px 20px;
+  border-right: $border-white;
+}
+.subscribe-form__input:-moz-placeholder {
+  color: $white;
+  transition: color 0.3s;
+}
+.subscribe-form__input::-moz-placeholder {
+  color: $white;
+  transition: color 0.3s;
+}
+.subscribe-form__input::-webkit-input-placeholder {
+  color: $white;
+  transition: color 0.3s;
+}
+.subscribe-form__input:-ms-input-placeholder {
+  color: $white;
+  transition: color 0.3s;
+}
+.subscribe-form__input::placeholder {
+  color: $white;
+  transition: color 0.3s;
+}
+
+.subscribe-form__input:focus:-moz-placeholder {
+  color: transparent;
+}
+.subscribe-form__input:focus::-moz-placeholder {
+  color: transparent;
+}
+.subscribe-form__input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.subscribe-form__input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.subscribe-form__input:focus::placeholder {
+  color: transparent;
+}
+.subscribe-form__button {
+  flex-shrink: 0;
+  padding: 0 15px;
+  color: $white;
+}

@@ -13,6 +13,7 @@ import PriceCard from '../../components/PriceCard';
 import { ReactComponent as Check } from '../../assets/icons/check.svg';
 import Button from '../../components/Button';
 import Testimony from '../../components/Testimony';
+import Subscribe from '../../components/Subscribe';
 
 export interface HomeProps {}
 
@@ -145,6 +146,20 @@ const Home: React.SFC<HomeProps> = () => {
         </div>
       </section>
       <Testimony/>
+      <Subscribe/>
+      <section className="ftco-section">
+        <div className="container">
+          <div className="text_center section__title_container">
+            <SectionTitle
+              title="Our Portfolio"
+              description="We're Happy to share our complete Projects"
+            />
+          </div>
+          <div className="cards">
+
+          </div>
+        </div>
+      </section>
     </>
   );
 }
