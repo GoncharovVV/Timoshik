@@ -74,11 +74,11 @@ const prices = [
     details: '100% free. Forever',
     description: 'Happy Clients',
     packageData: [
-      {title: '150 GB',
+      {id: 'pr1d1',title: '150 GB',
       description: 'Bandwidth'},
-      {title: '100 GB',
+      {id: 'pr1d2',title: '100 GB',
       description: 'Storage'},
-      {title: '$1.00 / GB',
+      {id: 'pr1d3',title: '$1.00 / GB',
       description: 'Overages'}
     ]
   },
@@ -89,11 +89,11 @@ const prices = [
     details: '100% free. Forever',
     description: 'Happy Clients',
     packageData: [
-      {title: '150 GB',
+      {id: 'pr2d1',title: '150 GB',
       description: 'Bandwidth'},
-      {title: '100 GB',
+      {id: 'pr2d2',title: '100 GB',
       description: 'Storage'},
-      {title: '$1.00 / GB',
+      {id: 'pr2d3',title: '$1.00 / GB',
       description: 'Overages'}
     ]
   },
@@ -104,11 +104,11 @@ const prices = [
     details: '100% free. Forever',
     description: 'Happy Clients',
     packageData: [
-      {title: '150 GB',
+      {id: 'pr3d1',title: '150 GB',
       description: 'Bandwidth'},
-      {title: '100 GB',
+      {id: 'pr3d2',title: '100 GB',
       description: 'Storage'},
-      {title: '$1.00 / GB',
+      {id: 'pr3d3',title: '$1.00 / GB',
       description: 'Overages'}
     ]
   },
@@ -119,11 +119,11 @@ const prices = [
     details: '100% free. Forever',
     description: 'Happy Clients',
     packageData: [
-      {title: '150 GB',
+      {id: 'pr4d1',title: '150 GB',
       description: 'Bandwidth'},
-      {title: '100 GB',
+      {id: 'pr4d2',title: '100 GB',
       description: 'Storage'},
-      {title: '$1.00 / GB',
+      {id: 'pr4d3',title: '$1.00 / GB',
       description: 'Overages'}
     ]
   }

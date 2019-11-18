@@ -91,7 +91,7 @@ const Home: React.SFC<HomeProps> = () => {
       <section className="cards get-quote">
         <div className="half_lg get-quote__left">
           <div className="get-quote__content">
-            
+
           </div>
         </div>
 

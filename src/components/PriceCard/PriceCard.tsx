@@ -4,9 +4,10 @@ import './PriceCard.scss'
 export interface PriceCardProps {
   title: string,
   price: number,
+  id: string,
   details: string,
   description: string,
-  packageData: {title: string, description: string}[]
+  packageData: {id: string, title: string, description: string}[]
 }
 
 const PriceCard: React.SFC<PriceCardProps> = ({ title, price, details, packageData}) => {
@@ -15,7 +16,7 @@ const PriceCard: React.SFC<PriceCardProps> = ({ title, price, details, packageDa
   };
   const dataList = packageData.map(item => {
     return (
-      <li>
+      <li key={item.id}>
         <strong>
           {item.title}
         </strong>
@@ -40,7 +41,7 @@ const PriceCard: React.SFC<PriceCardProps> = ({ title, price, details, packageDa
         </span>
         <ul className="price-card__list">
           {dataList}
-          <li>All features</li>
+          <li key="123">All features</li>
         </ul>
       </div>
     </div>
