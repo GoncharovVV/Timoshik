@@ -1,0 +1,38 @@
+@import '../../scss/variables', '../../scss/mixin';
+.blog-item {
+  width: 33.33%;
+  padding: 0 1.5rem;
+  margin-bottom: 3rem;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 30rem;
+    margin-bottom: 2.5rem;
+  }
+  @include min-screen(1024px) {
+    &:hover {
+      .blog-item__title {
+        color: $blue;
+      }
+    }
+  }
+  @include max-screen(768px) {
+    width: 100%;
+  }
+}
+.blog-item__details {
+  @include flex($align: baseline);
+  font-size: 15px;
+  color: $grey100;
+  font-weight: $fow300;
+  margin-bottom: 20px;
+  svg {
+    margin: 0 5px;
+  }
+}
+.blog-item__title {
+  font-size: $fos-md20;
+  line-height: 1.5;
+  color: $dark;
+  transition: color .3s;
+}

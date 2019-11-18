@@ -2,9 +2,12 @@ import * as React from 'react';
 import Intro from '../../components/Intro';
 import './Home.scss';
 import SectionTitle from '../../components/SectionTitle';
-import { goalItems } from '../../mock/mockData';
-import { work } from '../../mock/mockData';
-import { prices } from '../../mock/mockData';
+import {
+  goalItems,
+  blogList,
+  work,
+  prices
+  } from '../../mock/mockData';
 import GoalItem from '../../components/GoalItem';
 import ServiceGoalItem from '../../components/ServiceGoalItem';
 import ShortStatistic from '../../components/ShortStatistic';
@@ -14,6 +17,7 @@ import { ReactComponent as Check } from '../../assets/icons/check.svg';
 import Button from '../../components/Button';
 import Testimony from '../../components/Testimony';
 import Subscribe from '../../components/Subscribe';
+import BlogItem from '../../components/BlogItem';
 
 export interface HomeProps {}
 
@@ -48,6 +52,14 @@ const Home: React.SFC<HomeProps> = () => {
   const handleClickForm = () => {
     console.log('form');
   }
+  const listBlog = blogList.map(item => {
+    return (
+      <BlogItem
+        key={item.id}
+        {...item}
+      />
+    )
+  })
   return (
     <>
       <section className="home">
@@ -156,7 +168,7 @@ const Home: React.SFC<HomeProps> = () => {
             />
           </div>
           <div className="cards">
-
+            {listBlog}
           </div>
         </div>
       </section>

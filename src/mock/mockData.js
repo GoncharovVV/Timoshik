@@ -5,6 +5,9 @@ import work4 from '../assets/images/work-4.jpg';
 import work5 from '../assets/images/work-5.jpg';
 import work6 from '../assets/images/work-6.jpg';
 import person from '../assets/images/person_1.jpg';
+import blog from '../assets/images/image_1.jpg';
+import blog1 from '../assets/images/image_2.jpg';
+import blog2 from '../assets/images/image_3.jpg';
 const goalItems = [
   {
     id: 'gi1',
@@ -191,11 +194,38 @@ const testimony = [
     description: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
   },
 ];
+const blogList = [
+  {
+    id: 'bl1',
+    image: blog,
+    title: 'Even the all-powerful Pointing has no control about the blind texts',
+    author: 'Admin',
+    data: 'August 12, 2018',
+    msgCount: 3
+  },
+  {
+    id: 'bl2',
+    image: blog1,
+    title: 'Even the all-powerful Pointing has no control about the blind texts',
+    author: 'Admin',
+    data: 'August 12, 2018',
+    msgCount: 3
+  },
+  {
+    id: 'bl3',
+    image: blog2,
+    title: 'Even the all-powerful Pointing has no control about the blind texts',
+    author: 'Admin',
+    data: 'August 12, 2018',
+    msgCount: 3
+  }
+]
 export {
   goalItems,
   serviceItems,
   stat,
   work,
   prices,
-  testimony
+  testimony,
+  blogList
 };
