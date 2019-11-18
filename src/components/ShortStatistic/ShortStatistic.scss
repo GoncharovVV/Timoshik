@@ -1,7 +1,7 @@
 @import '../../scss/mixin', '../../scss/variables';
 
 .short-stat {
-  background: linear-gradient(135deg, #2f89fccf 0%, #55fbc2d6 100%), url(/static/media/about.82c0c629.jpg);
+  background: linear-gradient(135deg, #2f89fccf 0%, #55fbc2d6 100%), url("../../assets/images/about.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: $white;

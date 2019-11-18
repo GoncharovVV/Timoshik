@@ -1,0 +1,29 @@
+@import '../../scss/variables', '../../scss/mixin';
+.top-section__links {
+  @include flex($align: flex-start, $just: center);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  a {
+    color: $blue;
+    transition: color .3s;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    margin: 0 5px;
+    @include min-screen(1024px) {
+      &:hover {
+        color: rgba(0,0,0,0.7);
+      }
+    }
+    &.active {
+      color: rgba(0,0,0,0.7);
+      pointer-events: none;
+    }
+  }
+}
+.top-section {
+  background: linear-gradient(45deg, #f0f0f0b0 0%, #ffffffa8 55%, #ffffffb8 100%), url(/static/media/bg_2.83628803.jpg), url("../../assets/images/bg_2.jpg");
+  h1 {
+    font-size: 32px;
+    color: $dark;
+  }
+}

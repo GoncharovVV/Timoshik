@@ -51,7 +51,7 @@ const Home: React.SFC<HomeProps> = () => {
   });
   const handleClickForm = () => {
     console.log('form');
-  }
+  };
   const listBlog = blogList.map(item => {
     return (
       <BlogItem
