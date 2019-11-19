@@ -8,7 +8,7 @@ import slideItem2 from '../../assets/images/dashboard_full_3.png';
 
 export interface IntroProps {}
 
-const Intro: React.SFC<IntroProps> = () => {
+const Intro: React.FC<IntroProps> = () => {
   const handleClick = () => {
     console.log('click');
   };

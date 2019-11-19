@@ -5,7 +5,7 @@ export interface SubscribeProps {
 
 }
 
-const Subscribe: React.SFC<SubscribeProps> = () => {
+const Subscribe: React.FC<SubscribeProps> = () => {
   return (
     <section className="parallax subscribe text_center">
       <div className="container">

@@ -5,7 +5,7 @@ export interface PaginationItemProps {
   url: string
 }
 
-const PaginationItem: React.SFC<PaginationItemProps> = ({url, value}) => {
+const PaginationItem: React.FC<PaginationItemProps> = ({url, value}) => {
   let data;
   switch (value) {
     case 'arrLeft':

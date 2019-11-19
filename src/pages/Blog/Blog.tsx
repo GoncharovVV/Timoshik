@@ -10,7 +10,7 @@ export interface BlogProps {
 
 }
 
-const Blog: React.SFC<BlogProps> = () => {
+const Blog: React.FC<BlogProps> = () => {
   const listBlog = blogList.map(item => {
     return (
       <BlogItem

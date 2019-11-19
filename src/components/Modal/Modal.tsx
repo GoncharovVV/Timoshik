@@ -3,7 +3,7 @@ export interface ModalProps {
 
 }
 
-const Modal: React.SFC<ModalProps> = () => {
+const Modal: React.FC<ModalProps> = () => {
   return (
     <section>Modal</section>
   );

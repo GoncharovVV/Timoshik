@@ -10,7 +10,7 @@ export interface PriceCardProps {
   packageData: {id: string, title: string, description: string}[]
 }
 
-const PriceCard: React.SFC<PriceCardProps> = ({ title, price, details, packageData}) => {
+const PriceCard: React.FC<PriceCardProps> = ({ title, price, details, packageData}) => {
   const handleClick = () => {
     console.log('click');
   };

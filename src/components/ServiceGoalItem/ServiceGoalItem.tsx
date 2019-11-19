@@ -12,7 +12,7 @@ export interface ServiceGoalItemProps {
 
 }
 
-const ServiceGoalItem: React.SFC<ServiceGoalItemProps> = () => {
+const ServiceGoalItem: React.FC<ServiceGoalItemProps> = () => {
   const goalElements = serviceItems.map(({title, description, id, iconType}) => {
     const Icon = () => {
       switch (iconType) {

@@ -10,7 +10,7 @@ export interface AboutProps {
 
 }
 
-const About: React.SFC<AboutProps> = () => {
+const About: React.FC<AboutProps> = () => {
   const links = [
     {
       id: 'l1',

@@ -8,7 +8,7 @@ export interface WorkProps {
 
 }
 
-const Work: React.SFC<WorkProps> = () => {
+const Work: React.FC<WorkProps> = () => {
   const workElements = work.map(({title, id, image}) => {
     return (
       <BrandItem

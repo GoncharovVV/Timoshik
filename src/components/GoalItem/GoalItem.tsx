@@ -10,7 +10,7 @@ export interface GoalItemProps {
   type?: string
 }
 
-const GoalItem: React.SFC<GoalItemProps> = ({ title, description, type }) => {
+const GoalItem: React.FC<GoalItemProps> = ({ title, description, type }) => {
   const Icon = () => {
     switch (type) {
       case "market":

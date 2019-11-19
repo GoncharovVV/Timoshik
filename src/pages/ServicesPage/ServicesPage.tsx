@@ -9,7 +9,7 @@ export interface ServicesPageProps {
 
 }
 
-const ServicesPage: React.SFC<ServicesPageProps> = () => {
+const ServicesPage: React.FC<ServicesPageProps> = () => {
   const goalElements = goalItems.map((item) => {
     return (
       <GoalItem

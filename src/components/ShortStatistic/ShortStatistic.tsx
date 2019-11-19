@@ -6,7 +6,7 @@ export interface ShortStatisticProps {
 
 }
 
-const ShortStatistic: React.SFC<ShortStatisticProps> = () => {
+const ShortStatistic: React.FC<ShortStatisticProps> = () => {
   const statElements = stat.map(({ title, description, id }) => {
     return (
       <div className="item_quoter" key={id}>

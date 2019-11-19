@@ -5,7 +5,7 @@ export interface PaginationProps {
   arr: Array<{value: string, url: string, id: string}>
 }
 
-const Pagination: React.SFC<PaginationProps> = ({ arr }) => {
+const Pagination: React.FC<PaginationProps> = ({ arr }) => {
   const paginations = arr.map(({value, url, id}) => {
     return (
       <PaginationItem

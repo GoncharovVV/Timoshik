@@ -5,7 +5,7 @@ export interface BrandItemProps {
   image: any
 }
 
-const BrandItem: React.SFC<BrandItemProps> = ({ title, image }) => {
+const BrandItem: React.FC<BrandItemProps> = ({ title, image }) => {
   return (
     <a href="/" className="brand-item">
       <img src={image} alt={title} className="brand-item__image"/>

@@ -9,7 +9,7 @@ export interface PricingProps {
 
 }
 
-const Pricing: React.SFC<PricingProps> = () => {
+const Pricing: React.FC<PricingProps> = () => {
   const pricesElements = prices.map(item => {
     return (
       <PriceCard

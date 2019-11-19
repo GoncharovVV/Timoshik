@@ -5,7 +5,7 @@ export interface SectionTitleProps {
   description?: string
 }
 
-const SectionTitle: React.SFC<SectionTitleProps> = ({ title, description }) => {
+const SectionTitle: React.FC<SectionTitleProps> = ({ title, description }) => {
   return (
     <>
       <h2 className="section__title">{title}</h2>

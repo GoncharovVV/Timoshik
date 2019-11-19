@@ -14,7 +14,7 @@ export interface TestimonyProps {
   description?: string
 }
 
-const Testimony: React.SFC<TestimonyProps> = () => {
+const Testimony: React.FC<TestimonyProps> = () => {
   const params: ReactIdSwiperProps = {
     slidesPerView: 1,
     spaceBetween: 40,

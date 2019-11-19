@@ -5,7 +5,7 @@ export interface TopSectionProps {
   links: Array<{id: string, title: string, lHref: string}>
 }
 
-const TopSection: React.SFC<TopSectionProps> = ({title, links}) => {
+const TopSection: React.FC<TopSectionProps> = ({title, links}) => {
   const linksList = links.map(({id, title, lHref}) => {
     return (
       <li key={id}>

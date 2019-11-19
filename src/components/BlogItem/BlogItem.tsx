@@ -10,7 +10,7 @@ export interface BlogItemProps {
   msgCount: number
 }
 
-const BlogItem: React.SFC<BlogItemProps> = ({ image, title, author, data, msgCount }) => {
+const BlogItem: React.FC<BlogItemProps> = ({ image, title, author, data, msgCount }) => {
   return (
     <a href="/" className="blog-item">
       <img src={image} alt={title} className="blog-item__img"/>

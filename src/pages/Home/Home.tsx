@@ -21,7 +21,7 @@ import BlogItem from '../../components/BlogItem';
 
 export interface HomeProps {}
 
-const Home: React.SFC<HomeProps> = () => {
+const Home: React.FC<HomeProps> = () => {
   const goalElements = goalItems.map((item) => {
     return (
       <GoalItem

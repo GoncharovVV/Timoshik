@@ -3,7 +3,7 @@ export interface QuoteFormProps {
 
 }
 
-const QuoteForm: React.SFC<QuoteFormProps> = () => {
+const QuoteForm: React.FC<QuoteFormProps> = () => {
   return (
     <section>
       QuoteForm

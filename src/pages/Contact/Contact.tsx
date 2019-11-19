@@ -5,7 +5,7 @@ export interface ContactProps {
 
 }
 
-const Contact: React.SFC<ContactProps> = () => {
+const Contact: React.FC<ContactProps> = () => {
   const links = [
     {
       id: 'l1',
