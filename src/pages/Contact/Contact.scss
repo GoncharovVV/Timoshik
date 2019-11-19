@@ -1,0 +1,41 @@
+@import '../../scss/variables', '../../scss/mixin';
+
+.map {
+  object-fit: cover;
+}
+.contact__form {
+  padding-right: 4.8rem;
+  margin-bottom: 20px;
+  @include max-screen(640px) {
+    padding-right: 0;
+  }
+  .form-control {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+  form {
+    max-width: 700px;
+    width: 100%;
+  }
+}
+.contact__title {
+  line-height: 1.5;
+  color: $dark;
+  font-size: 24px;
+  margin-bottom: 2.5rem;
+}
+.contact__details {
+  line-height: 28.8px;
+  padding-right: 15px;
+  color: $grey400;
+  font-size: 16px;
+  a {
+    color: #1a1a1a;
+  }
+  span {
+    margin-right: 5px;
+  }
+}
+.cards__contact {
+  margin-bottom: 4.8rem;
+}

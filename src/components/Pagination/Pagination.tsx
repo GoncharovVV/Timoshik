@@ -10,8 +10,8 @@ const Pagination: React.FC<PaginationProps> = ({ arr }) => {
     return (
       <PaginationItem
         key={id}
-        value = {value}
-        url = {url}
+        value={value}
+        url={url}
       />
     )
   });

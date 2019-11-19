@@ -4,12 +4,15 @@ import "./Header.scss";
 import Button from "../Button";
 import classnames from 'classnames';
 import { ReactComponent as Burger } from '../../assets/icons/burger.svg';
-export interface HeaderProps {};
+export interface HeaderProps {
+  toggleModal: () => void;
+};
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({toggleModal}) => {
   const [show, setShow] = React.useState(false);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(e.currentTarget);
+    // console.log(e.currentTarget);
+    toggleModal()
   };
   const hintClassName = classnames('header-nav', { 'show': show });
 

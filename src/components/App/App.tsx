@@ -1,6 +1,8 @@
 import * as React from "react";
 import "./App.scss";
 import Header from "../Header";
+import classnames from 'classnames';
+
 import {
   BrowserRouter as Router, Route,
 } from 'react-router-dom';
@@ -14,12 +16,19 @@ import ServicesPage from '../../pages/ServicesPage';
 import Team from '../../pages/Team';
 import Work from '../../pages/Work';
 import Footer from "../Footer";
+import Modal from "../Modal";
 
 const App: React.FC = () => {
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
+  const toggleModal = () => {
+    setModalIsOpen(prevState => !prevState);
+  };
+  const hintClassName = classnames('wrapper', { 'modal-open': modalIsOpen});
+
   return (
-    <div className="wrapper">
+    <div className={hintClassName}>
       <Router>
-        <Header/>
+        <Header toggleModal={toggleModal}/>
         <main className="main">
           <Route path="/" component={Home} exact={true}/>
           <Route path="/about" component={About}/>
@@ -32,6 +41,7 @@ const App: React.FC = () => {
         </main>
         <Footer/>
       </Router>
+      <Modal hidden={modalIsOpen} toggleModal={toggleModal}/>
     </div>
   );
 };
