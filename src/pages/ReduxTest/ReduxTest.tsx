@@ -1,34 +1,40 @@
 import * as React from 'react';
-import { createStore, bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
 import * as actions from '../../store/actions/actions';
-import reducer from '../../store/reducer/reducer';
-export interface ReduxTestProps {};
+export interface ReduxTestProps {
+  counter: number,
+  inc: any,
+  dec: any,
+  rnd: any
+};
 
-const ReduxTest: React.FC<ReduxTestProps> = () => {
-
-
-  const store = createStore(reducer);
-  const { dispatch, subscribe } = store;
-
-  const { inc: incDispatch, dec: decDispatch, rnd: rndDispatch } = bindActionCreators(actions, dispatch);
-  let state = 0;
-  // const [state, setstate] = React.useState(0);
-  subscribe(() => {
-    console.log(store.getState());
-  });
-  const onRnd = () => {
-    const payload: number = Math.floor(Math.random()*10);
-    rndDispatch(payload);
-  }
-
+const ReduxTest: React.FC<ReduxTestProps> = ({counter, inc, dec, rnd}) => {
   return (
     <div className="container">
-      <span>{state}</span>
-      <button onClick={incDispatch}>Increment</button>
-      <button onClick={decDispatch}>Decrement</button>
-      <button onClick={onRnd}>Random</button>
+      <span>{counter}</span>
+      <button onClick={inc}>Increment</button>
+      <button onClick={dec}>Decrement</button>
+      <button onClick={rnd}>Random</button>
     </div>
   );
 }
-
-export default ReduxTest;
+const mapStateToProps = (state: any) => {
+  return {
+    counter: state
+  }
+};
+// const mapDispatchToProps = (dispatch: any) => {
+  // const { inc, dec, rnd } = bindActionCreators(actions, dispatch);
+  // return {
+  //   inc,
+  //   dec,
+  //   rnd
+  // }
+  // or
+  // return bindActionCreators(actions, dispatch);
+// };
+// можно передать обьект с екшенами вместо mapDispatchToProps функции
+// mapDispatchToProps используеться для более гибкой настройки
+// export default connect(mapStateToProps, mapDispatchToProps)(ReduxTest);
+export default connect(mapStateToProps, actions)(ReduxTest);

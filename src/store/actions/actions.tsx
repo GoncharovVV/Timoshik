@@ -4,4 +4,9 @@ export const inc = ():IAction => ({type: 'INC'});
 
 export const dec = ():IAction => ({type: 'DEC'});
 
-export const rnd = (payload: any):IAction => ({type: 'RND', payload});
+export const rnd = ():IAction => {
+  return  {
+    type: 'RND',
+    payload: Math.floor(Math.random()*10)
+  }
+};

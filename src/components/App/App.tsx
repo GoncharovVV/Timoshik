@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from '../../store/reducer/reducer';
 import classnames from 'classnames';
 import {
   BrowserRouter as Router, Route,
@@ -20,6 +22,7 @@ import Footer from "../Footer";
 import Modal from "../Modal";
 
 import "./App.scss";
+const store = createStore(reducer);
 
 const App: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
@@ -29,7 +32,7 @@ const App: React.FC = () => {
   const hintClassName = classnames('wrapper', { 'modal-open': modalIsOpen});
 
   return (
-    // <Provider>
+    <Provider store={store}>
       <div className={hintClassName}>
         <Router>
           <Header toggleModal={toggleModal}/>
@@ -48,7 +51,7 @@ const App: React.FC = () => {
         </Router>
         <Modal hidden={modalIsOpen} toggleModal={toggleModal}/>
       </div>
-    // </Provider>
+    </Provider>
   );
 };
 export default App;
