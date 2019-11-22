@@ -15,7 +15,7 @@ import Pricing from '../../pages/Pricing';
 import ServicesPage from '../../pages/ServicesPage';
 import Team from '../../pages/Team';
 import Work from '../../pages/Work';
-import ReduxTest from "../../pages/ReduxTest";
+
 
 import Header from "../Header";
 import Footer from "../Footer";
@@ -45,7 +45,6 @@ const App: React.FC = () => {
             <Route path="/services" component={ServicesPage}/>
             <Route path="/team" component={Team}/>
             <Route path="/work" component={Work}/>
-            <Route path="/test" component={ReduxTest}/>
           </main>
           <Footer/>
         </Router>
