@@ -7,7 +7,7 @@ import {
   blogList,
   work,
   prices
-  } from '../../mock/mockData';
+  } from '../../mockData/mockData';
 import GoalItem from '../../components/GoalItem';
 import ServiceGoalItem from '../../components/ServiceGoalItem';
 import ShortStatistic from '../../components/ShortStatistic';

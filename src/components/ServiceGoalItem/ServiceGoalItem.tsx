@@ -7,7 +7,7 @@ import { ReactComponent as PieChart } from '../../assets/icons/pie-chart.svg';
 import { ReactComponent as Web } from '../../assets/icons/web.svg';
 
 // pencil.svg pie-chart.svg web.svg
-import { serviceItems } from '../../mock/mockData';
+import { serviceItems } from '../../mockData/mockData';
 export interface ServiceGoalItemProps {
 
 }

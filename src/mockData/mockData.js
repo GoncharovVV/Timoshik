@@ -8,6 +8,7 @@ import person from '../assets/images/person_1.jpg';
 import blog from '../assets/images/image_1.jpg';
 import blog1 from '../assets/images/image_2.jpg';
 import blog2 from '../assets/images/image_3.jpg';
+
 const goalItems = [
   {
     id: 'gi1',
@@ -219,7 +220,7 @@ const blogList = [
     data: 'August 12, 2018',
     msgCount: 3
   }
-]
+];
 export {
   goalItems,
   serviceItems,

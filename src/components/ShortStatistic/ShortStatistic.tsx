@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './ShortStatistic.scss';
-import { stat } from '../../mock/mockData';
+import { stat } from '../../mockData/mockData';
 
 export interface ShortStatisticProps {
 

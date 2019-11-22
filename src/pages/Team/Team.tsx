@@ -2,7 +2,7 @@ import * as React from 'react';
 import Subscribe from '../../components/Subscribe';
 import SectionTitle from '../../components/SectionTitle';
 import TeamItem from '../../components/TeamItem';
-import { testimony } from '../../mock/mockData';
+import { testimony } from '../../mockData/mockData';
 import './Team.scss'
 import TopSection from '../../components/TopSection';
 export interface TeamProps {

@@ -3,7 +3,7 @@ import './Testimony.scss';
 import SectionTitle from '../SectionTitle';
 import Swiper, { ReactIdSwiperProps } from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-import { testimony } from '../../mock/mockData';
+import { testimony } from '../../mockData/mockData';
 import { ReactComponent as QuoteLeft } from '../../assets/icons/quote-left.svg';
 //
 export interface TestimonyProps {

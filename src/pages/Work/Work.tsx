@@ -1,6 +1,6 @@
 import * as React from 'react';
 import SectionTitle from '../../components/SectionTitle';
-import { work } from '../../mock/mockData';
+import { work } from '../../mockData/mockData';
 import BrandItem from '../../components/BrandItem';
 import Subscribe from '../../components/Subscribe';
 import TopSection from '../../components/TopSection';

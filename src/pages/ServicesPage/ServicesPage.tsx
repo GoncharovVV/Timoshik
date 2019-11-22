@@ -3,7 +3,7 @@ import ServiceGoalItem from '../../components/ServiceGoalItem';
 import Subscribe from '../../components/Subscribe';
 import GoalItem from '../../components/GoalItem';
 import SectionTitle from '../../components/SectionTitle';
-import { goalItems } from '../../mock/mockData';
+import { goalItems } from '../../mockData/mockData';
 import TopSection from '../../components/TopSection';
 export interface ServicesPageProps {
 

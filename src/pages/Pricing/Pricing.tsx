@@ -2,7 +2,7 @@ import * as React from 'react';
 import Subscribe from '../../components/Subscribe';
 import SectionTitle from '../../components/SectionTitle';
 import PriceCard from '../../components/PriceCard';
-import { prices } from '../../mock/mockData';
+import { prices } from '../../mockData/mockData';
 import './Pricing.scss';
 import TopSection from '../../components/TopSection';
 export interface PricingProps {

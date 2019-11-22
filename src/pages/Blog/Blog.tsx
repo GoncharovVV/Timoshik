@@ -1,7 +1,7 @@
 import * as React from 'react';
 import BlogItem from '../../components/BlogItem';
 
-import { blogList } from '../../mock/mockData';
+import { blogList } from '../../mockData/mockData';
 import Subscribe from '../../components/Subscribe';
 import TopSection from '../../components/TopSection';
 import Pagination from '../../components/Pagination';

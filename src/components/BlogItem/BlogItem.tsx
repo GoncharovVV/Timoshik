@@ -11,6 +11,7 @@ export interface BlogItemProps {
 }
 
 const BlogItem: React.FC<BlogItemProps> = ({ image, title, author, data, msgCount }) => {
+
   return (
     <a href="/" className="blog-item">
       <img src={image} alt={title} className="blog-item__img"/>
