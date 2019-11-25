@@ -1,7 +1,11 @@
 import * as React from "react";
-import { Link, NavLink } from "react-router-dom";
 import classnames from 'classnames';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
+import {
+  withRouter,
+  RouteComponentProps,
+  Link,
+  NavLink
+} from 'react-router-dom';
 import "./Header.scss";
 import Button from "../Button";
 import { ReactComponent as Burger } from '../../assets/icons/burger.svg';
