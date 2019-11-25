@@ -1,17 +1,17 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import classnames from 'classnames';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import "./Header.scss";
 import Button from "../Button";
-import classnames from 'classnames';
 import { ReactComponent as Burger } from '../../assets/icons/burger.svg';
-export interface HeaderProps {
+export interface HeaderProps extends RouteComponentProps {
   toggleModal: () => void;
 };
 
-const Header: React.FC<HeaderProps> = ({toggleModal}) => {
+const Header: React.FC<HeaderProps> = ({toggleModal, location, match, history}) => {
   const [show, setShow] = React.useState(false);
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    // console.log(e.currentTarget);
     toggleModal()
   };
   const hintClassName = classnames('header-nav', { 'show': show });
@@ -32,44 +32,44 @@ const Header: React.FC<HeaderProps> = ({toggleModal}) => {
         <nav className={hintClassName}>
           <ul className="nav-list">
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/">
+              <NavLink className="nav-list__link" exact={true} activeClassName="active" to="/">
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/about">
+              <NavLink className="nav-list__link" activeClassName="active" to="/about">
                 About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/services">
+              <NavLink className="nav-list__link" activeClassName="active" to="/services">
                 Services
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/work">
+              <NavLink className="nav-list__link" activeClassName="active" to="/work">
                 Work
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/team">
+              <NavLink className="nav-list__link" activeClassName="active" to="/team">
                 Team
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/pricing">
+              <NavLink className="nav-list__link" activeClassName="active" to="/pricing">
                 Pricing
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/blog">
+              <NavLink className="nav-list__link" activeClassName="active" to="/blog">
                 Blog
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-list__item">
-              <Link className="nav-list__link" to="/contact">
+              <NavLink className="nav-list__link" activeClassName="active" to="/contact">
                 Contact
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-list__btn">
               <Button
@@ -85,4 +85,4 @@ const Header: React.FC<HeaderProps> = ({toggleModal}) => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

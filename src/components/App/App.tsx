@@ -7,7 +7,6 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  // Redirect
 } from 'react-router-dom';
 
 import Home from '../../pages/Home'
@@ -50,8 +49,6 @@ const App: React.FC = () => {
               <Route path="/services" component={ServicesPage}/>
               <Route path="/team" component={Team}/>
               <Route path="/work" component={Work}/>
-              {/* как вариант на несуществующий урл */}
-              {/* <Redirect to="/"/> */}
               <Route component={NotFound} />
             </Switch>
           </main>

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './TopSection.scss';
+import { NavLink } from 'react-router-dom';
 export interface TopSectionProps {
   title: string,
   links: Array<{id: string, title: string, lHref: string}>
@@ -9,7 +10,9 @@ const TopSection: React.FC<TopSectionProps> = ({title, links}) => {
   const linksList = links.map(({id, title, lHref}) => {
     return (
       <li key={id}>
-        <a href={lHref}>{title}</a>
+        <NavLink exact={true} activeClassName="active" to={lHref}>
+          {title}
+        </NavLink>
       </li>
     );
   });
