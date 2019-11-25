@@ -1,6 +1,6 @@
 import { IReducer } from '../../interfaces/actions.interface';
 
-const reducer:IReducer = (state = 0, { type, payload=0 }) => {
+const reducer:IReducer = (state = 0, { type, payload = 0 }) => {
   switch (type) {
     case 'INC':
       return state + 1;
